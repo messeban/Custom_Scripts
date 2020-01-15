@@ -1,9 +1,8 @@
 #!/bin/bash
 
+path="/home/essebane0ne/Documents/Projects/"
 
 function create_nodejs(){
-
-path="/home/essebane0ne/Documents/Projects/"
 
 if [ "$#" -gt 0 ]
 then
@@ -34,8 +33,6 @@ else
 fi
 }
 function create(){
-
-path="/home/essebane0ne/Documents/Projects/"
 
 if [ "$#" -gt 0 ]
 then
