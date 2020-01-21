@@ -15,10 +15,13 @@ then
 	touch "app.js"
 	touch "README.md"
 	touch ".gitignore"
-	mkdir $path"$1/""routes/"
-	mkdir $path"$1/""views/"
-	mkdir $path"$1/""models/"
-	mkdir $path"$1/""controllers/"
+	mkdir "routes/"
+	mkdir "models/"
+	mkdir "controllers/"
+        mkdir -p "views/includes"
+	touch "views/includes/header.ejs"
+	touch "views/includes/footer.ejs"
+
 	git init
 	git config --global user.name "Mourad Essebane"
 	git config --global user.email "essebane.mourad@gmail.com"
