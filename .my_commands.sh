@@ -30,9 +30,8 @@ then
 		echo "Project Directory created"
 	fi
 else
-	echo "no Args. Give name"
-	read -r newPath
-	bash create_nodejs.sh $newPath
+	read -p "no Args. Give name: " opt
+	create opt
 fi
 }
 function create(){
@@ -57,8 +56,25 @@ then
 		echo "Project Directory created"
 	fi
 else
-	echo "no Args. Give name"
-	read  -r newPath
-	bash create.sh $newPath
+	read -p "no Args. Give name: " opt
+	create "$opt"
+fi
+}
+
+
+function gopro(){
+	
+if [ "$#" -gt 0 ]
+then
+	if [ -d $path"$1" ]
+	then
+		cd $path"$1"
+	else
+		echo "Project Directory doesn't exist"
+		cd $path
+	fi
+else
+		cd $path
+
 fi
 }
