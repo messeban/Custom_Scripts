@@ -18,9 +18,7 @@ then
 		mkdir "routes/"
 		mkdir "models/"
 		mkdir "controllers/"
-                mkdir "util/"
-                mkdir -p "public/css/"
-		mkdir "public/js"
+
 		mkdir -p "views/includes"
 		touch "views/includes/header.ejs"
 		touch "views/includes/footer.ejs"

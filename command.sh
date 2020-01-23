@@ -2,7 +2,7 @@
 
 path="/home/essebane0ne/Documents/Projects/"
 
-function create_nodejs(){
+function kalle(){
 
 if [ "$#" -gt 0 ]
 then
@@ -18,10 +18,7 @@ then
 		mkdir "routes/"
 		mkdir "models/"
 		mkdir "controllers/"
-                mkdir "util/"
-                mkdir -p "public/css/"
-		mkdir "public/js"
-		mkdir -p "views/includes"
+			mkdir -p "views/includes"
 		touch "views/includes/header.ejs"
 		touch "views/includes/footer.ejs"
 
