@@ -15,11 +15,8 @@ then
 		touch "app.js"
 		touch "README.md"
 		touch ".gitignore"
-		mkdir "routes/"
-		mkdir "models/"
-		mkdir "controllers/"
-                mkdir "util/"
-                mkdir -p "public/css/"
+		mkdir routes/ models/ controllers/ util/
+		mkdir -p "public/css/"
 		mkdir "public/js"
 		mkdir -p "views/includes"
 		touch "views/includes/header.ejs"
