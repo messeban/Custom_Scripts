@@ -27,9 +27,10 @@ then
 		git config --global user.email "essebane.mourad@gmail.com"
 		git add .
 		git commit -m "Initial commit"
-		echo "Project Directory created"
 		code .
 		google-chrome https://www.github.com/messeban/
+		echo "Project Directory created"
+
 	fi
 else
 	read -p "no Args. Give name: " opt
@@ -72,7 +73,7 @@ then
 	then
 		cd $path"$1"
 		code .
-		google-chrome https://www.github.com/messeban/"$1"
+		google-chrome https://www.github.com/messeban/"$1" & disown 
 	else
 		echo "Project Directory doesn't exist"
 		cd $path
