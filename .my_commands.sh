@@ -28,6 +28,8 @@ then
 		git add .
 		git commit -m "Initial commit"
 		echo "Project Directory created"
+		code .
+		google-chrome https://www.github.com/messeban/
 	fi
 else
 	read -p "no Args. Give name: " opt
@@ -69,6 +71,8 @@ then
 	if [ -d $path"$1" ]
 	then
 		cd $path"$1"
+		code .
+		google-chrome https://www.github.com/messeban/"$1"
 	else
 		echo "Project Directory doesn't exist"
 		cd $path
