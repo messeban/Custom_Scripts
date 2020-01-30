@@ -80,6 +80,15 @@ then
 	fi
 else
 		cd $path
-
+		ls -l -a
 fi
+}
+
+
+function cpy(){
+cd
+cd ../../usr/local/bin/
+cp ../../../home/essebane0ne/Documents/Projects/Custom_Scripts/.my_commands.sh .my_commands.sh
+source .my_commands.sh
+gp
 }
