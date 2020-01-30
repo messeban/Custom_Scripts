@@ -65,7 +65,7 @@ fi
 }
 
 
-function gopro(){
+function gp(){
 	
 if [ "$#" -gt 0 ]
 then
