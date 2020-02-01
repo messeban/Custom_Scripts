@@ -102,4 +102,13 @@ function gobin(){
 		cd
 		cd ../../usr/local/bin/
 }
+function google(){
+	if [ "$#" -gt 0 ]
+		then
+			google-chrome https://www.google.com/search?q="$1" & disown 
 
+		else
+			google-chrome https://www.google.com/ & disown 
+			create opt
+		fi
+}
