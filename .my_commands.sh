@@ -109,6 +109,5 @@ function google(){
 
 		else
 			google-chrome https://www.google.com/ & disown 
-			create opt
 		fi
 }
