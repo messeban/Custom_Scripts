@@ -28,7 +28,7 @@ function create_nodejs(){
 				git add .
 				git commit -m "Initial commit"
 				code .
-				google-chrome https://www.github.com/messeban/
+				google-chrome https://www.github.com/messeban/ </dev/null >/dev/null 2>&1 & disown
 				echo "Project Directory created"
 
 			fi
@@ -73,7 +73,8 @@ function gp(){
 			then
 				cd $path"$1"
 				code .
-				google-chrome https://www.github.com/messeban/"$1" & disown 
+				google-chrome https://www.github.com/messeban/"$1" </dev/null >/dev/null 2>&1 & disown
+				clear
 			else
 				echo "Project Directory doesn't exist"
 				cd $path
@@ -96,18 +97,21 @@ function cpy(){
 function gohome(){
 		cd
 		cd Documents/Projects/Custom_Scripts
+		clear
 }
 
 function gobin(){
 		cd
 		cd ../../usr/local/bin/
+		ls -l -a
 }
 function google(){
 	if [ "$#" -gt 0 ]
 		then
-			google-chrome https://www.google.com/search?q="$1" & disown 
-
+			google-chrome https://www.google.com/search?q="$1" </dev/null >/dev/null 2>&1 & disown
+			clear
 		else
-			google-chrome https://www.google.com/ & disown 
+			google-chrome https://www.google.com/ </dev/null >/dev/null 2>&1 & disown
+			clear
 		fi
 }
