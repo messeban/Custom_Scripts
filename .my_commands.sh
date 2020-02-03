@@ -48,13 +48,13 @@ function create(){
 									esac
 									fi
 					else
-						read -p "no Args. Give name: " opt
-						create opt
+						echo "You haven't chosen a Project name"
+						create
 					fi
 			fi
 		else
 			echo "You haven't chosen a Programming Language"
-			creates
+			create
 		fi
 		
 }
