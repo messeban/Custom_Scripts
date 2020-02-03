@@ -13,9 +13,9 @@ function create(){
 		echo "[$j] ${type[$i]}"
 		done
 	read -p "Choose Programming Language:" choice
-	k=$(expr $choice - 1)
-	if [ $choice -gt 0 ]
+	if [ ! -z $choice ]
 		then
+			k=$(expr $choice - 1)
 			printf "You chose ${type[$k]}\nConfirm[Y/n]?\n"
 			read conf
 			confirm=${conf,,}
@@ -53,7 +53,8 @@ function create(){
 					fi
 			fi
 		else
-			printf "You chose Bash\n"
+			echo "You haven't chosen a Programming Language"
+			creates
 		fi
 		
 }
