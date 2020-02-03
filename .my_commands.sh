@@ -108,8 +108,19 @@ function gobin(){
 function google(){
 	if [ "$#" -gt 0 ]
 		then
-			google-chrome https://www.google.com/search?q="$1" </dev/null >/dev/null 2>&1 & disown
-			clear
+			if [ "$#" -eq 1 ]
+				then
+					google-chrome https://www.google.com/search?q="$1" </dev/null >/dev/null 2>&1 & disown
+					clear
+				else
+					link="$1"
+					for (( c=2; c<="$#"; c++ ))
+					do  
+						link+="+${!c}"
+					done
+					google-chrome https://www.google.com/search?q="$link" </dev/null >/dev/null 2>&1 & disown
+					clear
+			fi
 		else
 			google-chrome https://www.google.com/ </dev/null >/dev/null 2>&1 & disown
 			clear
