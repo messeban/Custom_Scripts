@@ -3,7 +3,8 @@
 path="/home/essebane0ne/Documents/Projects/"
 
 function create(){
-	printf "Make a choice:\n"
+	printf "####################################################"
+	printf "\nMake a choice:\n"
 	type=("NodeJS" "Bash" "Html")
 	len=${#type[@]}
 	for((i=0; i<len; i++))
@@ -12,6 +13,7 @@ function create(){
 		printf "\t"
 		echo "[$j] ${type[$i]}"
 		done
+		printf "####################################################\n"
 	read -p "Choose Programming Language:" choice
 	if [ ! -z $choice ]
 		then
@@ -22,6 +24,8 @@ function create(){
 			if [ $confirm = "y" ]
 				then
 					printf "You confirmed ${type[$k]}\n"
+					printf "####################################################\n"
+
 					read -p "Project Name: " name
 					if [ ! -z "$name" ]
 						then
@@ -51,6 +55,8 @@ function create(){
 						echo "You haven't chosen a Project name"
 						create
 					fi
+			else
+			create
 			fi
 		else
 			echo "You haven't chosen a Programming Language"
