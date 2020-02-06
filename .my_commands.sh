@@ -98,6 +98,7 @@ function cpy(){
 function gohome(){
 		cd
 		cd Documents/Projects/Custom_Scripts
+		code .
 		clear
 }
 
@@ -169,4 +170,11 @@ function make(){
 function ns(){
 	gohome
 	echo "#!/bin/bash">"$1".sh
+	code "$1"
 }
+function listfolders(){
+    #echo "list of folders"
+	array=($path*/)
+    for dir in "${array[@]}"; do echo "$dir" | cut -c37-; done
+}
+#test2020
