@@ -165,3 +165,8 @@ function make(){
 	code .
 	echo "Project Directory created"
 }
+
+function ns(){
+	gohome
+	echo "#!/bin/bash">"$1".sh
+}
