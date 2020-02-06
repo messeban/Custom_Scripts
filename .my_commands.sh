@@ -172,9 +172,4 @@ function ns(){
 	echo "#!/bin/bash">"$1".sh
 	code "$1"
 }
-function listfolders(){
-    #echo "list of folders"
-	array=($path*/)
-    for dir in "${array[@]}"; do echo "$dir" | cut -c37-; done
-}
-#test2020
+
