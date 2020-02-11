@@ -81,8 +81,9 @@ function gp(){
 				cd $path
 			fi
 		else
-				cd $path
-				ls -l -a
+			clear
+			cd $path
+			ls -l -a
 		fi
 }
 
