@@ -146,6 +146,7 @@ function make_nodejs(){
 	git config --global user.email "essebane.mourad@gmail.com"
 	git add .
 	git commit -m "Initial commit"
+	npm init
 	code .
 	google-chrome https://www.github.com/messeban/ </dev/null >/dev/null 2>&1 & disown
 	echo "Project Directory created"
