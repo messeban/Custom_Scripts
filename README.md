@@ -1,6 +1,7 @@
 Custom Scripts for bash to automate repeated actions.
 
 Functions:
+
 1.) Create: Calls the functions make and make_nodejs.
 
 2.) gp: Stands for "Go Projects": Go to projects folder.
