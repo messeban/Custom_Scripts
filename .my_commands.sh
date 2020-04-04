@@ -41,7 +41,7 @@ function create(){
 											;;
 										2)
 											echo "Bash"
-											make "$name"
+											make_empty "$name"
 											;;
 										3)
 											echo "Htt"
@@ -74,7 +74,11 @@ function gp(){
 			then
 				cd $path"$1"
 				code .
-				google-chrome https://www.github.com/messeban/"$1" </dev/null >/dev/null 2>&1 & disown
+				url=$(git config --get remote.origin.url)
+					if [ ! -z "$url" ]
+						then
+							google-chrome $url </dev/null >/dev/null 2>&1 & disown
+					fi
 				clear
 			else
 				echo "Project Directory doesn't exist"
@@ -153,7 +157,7 @@ function make_nodejs(){
 	echo "Project Directory created"
 }
 
-function make(){
+function make_empty(){
 	mkdir $path"$1"
 	cd $path"$1"
 
