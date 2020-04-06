@@ -99,18 +99,32 @@ function cpy(){
 		source .my_commands.sh
 		gp
 }
-
 function gohome(){
 		cd
 		cd Documents/Projects/Custom_Scripts
 		code .
 		clear
 }
-
 function gobin(){
 		cd
 		cd ../../usr/local/bin/
 		ls -l -a
+}
+function goGithub(){
+		if [ "$#" -gt 0 ]
+			then
+				if [ "$#" -eq 1 ]
+					then
+						google-chrome https://www.github.com/messeban/$1 </dev/null >/dev/null 2>&1 & disown
+						clear
+					else
+						read -p "Please give only one repo:" choice
+						goGithub $choice
+				fi
+		else
+			google-chrome https://www.github.com/messeban/ </dev/null >/dev/null 2>&1 & disown
+			clear
+		fi
 }
 function google(){
 	if [ "$#" -gt 0 ]
