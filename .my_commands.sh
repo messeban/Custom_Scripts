@@ -179,3 +179,15 @@ function ns(){
 	code "$1"
 }
 
+function listFunctions(){
+	func=($(grep -e "function" /home/essebane0ne/Documents/Projects/Custom_Scripts/.my_commands.sh | cut -f1 -d"{"))
+	sumFunc=0
+	for i in ${!func[@]}; do
+		if [ ${func[i]} = "function" ]
+			then echo ${func[i+1]}
+			((sumFunc = sumFunc+1))
+		fi
+	done
+	echo $sumFunc
+}
+
