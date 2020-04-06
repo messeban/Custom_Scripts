@@ -174,9 +174,15 @@ function make_empty(){
 }
 
 function ns(){
-	gohome
-	echo "#!/bin/bash">"$1".sh
-	code "$1"
+	if [ $# -gt 0 ]
+		then
+			gohome
+			echo "#!/bin/bash">"$1".sh
+			code "$1.sh"
+		else
+			read -p "Name your script:" choice
+			ns $choice
+		fi
 }
 
 function listFunctions(){
