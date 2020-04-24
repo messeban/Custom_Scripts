@@ -44,7 +44,8 @@ function create(){
 											make_empty "$name"
 											;;
 										3)
-											echo "Htt"
+											echo "Html"
+											make_Html "$name"
 											;; 
 										*)
 											echo "Hmm, seems i've never used it."
@@ -177,6 +178,27 @@ function make_empty(){
 
 	touch "README.md"
 	touch ".gitignore"
+
+	git init
+	git config --global user.name "Mourad Essebane"
+	git config --global user.email "essebane.mourad@gmail.com"
+	git add .
+	git commit -m "Initial commit"
+	code .
+	echo "Project Directory created"
+}
+
+function make_Html(){
+	mkdir $path"$1"
+	cd $path"$1"
+	touch index.html
+	touch "README.md"
+	touch ".gitignore"
+	mkdir -p "public/css"
+	mkdir -p "public/js"
+	mkdir -p "public/images"
+	touch "public/css/main.css"		
+	touch "public/js/main.js"
 
 	git init
 	git config --global user.name "Mourad Essebane"
