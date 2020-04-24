@@ -20,7 +20,7 @@ Functions:
 
         9.) make: Make Empty git initialized Project(repository)
 
-        10.) make_nodejs: Make git initialized HTML based Project(repository)
+        10.) make_Html: Make git initialized HTML based Project(repository)
 
         11.) ns: Stands for "New Script": Make new bash script.
 
