@@ -16,10 +16,12 @@ Functions:
 
         7.) google: Go to google.com if there are no args otherwise search on google the given args
 
-        8.) make_nodejs: Make git initialized NodeJS Project(repository)
+        8.) make_nodejs: Make git initialized NodeJS based Project(repository)
 
         9.) make: Make Empty git initialized Project(repository)
 
-        10.) ns: Stands for "New Script": Make new bash script.
+        10.) make_nodejs: Make git initialized HTML based Project(repository)
 
-        11.) listFunctions: list all available functions of the custom script.
+        11.) ns: Stands for "New Script": Make new bash script.
+
+        12.) listFunctions: list all available functions of the custom script.
