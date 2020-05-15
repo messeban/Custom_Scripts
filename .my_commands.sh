@@ -14,7 +14,7 @@ function create(){
 		echo "[$j] ${type[$i]}"
 		done
 		printf "####################################################\n"
-	read -p "Choose Programming Language:" choice
+	read -p "Choose Programming Language [1-$len]:" choice
 	if [ ! -z $choice ]
 		then
 			k=$(expr $choice - 1)
@@ -98,7 +98,7 @@ function cpy(){
 		cd ../../usr/local/bin/
 		cp ../../../home/essebane0ne/Documents/Projects/Custom_Scripts/.my_commands.sh .my_commands.sh
 		source .my_commands.sh
-		gp
+		gohome
 }
 function gohome(){
 		cd
@@ -233,3 +233,11 @@ function listFunctions(){
 	echo $sumFunc
 }
 
+function orgDown(){
+	cd
+	cd Downloads/Downloaded/
+	today=$(date +'%Y%m%d')
+	mkdir $today
+	cd
+	mv ~/Downloads/!(Downloaded) ~/Downloads/Downloaded/${today}
+}

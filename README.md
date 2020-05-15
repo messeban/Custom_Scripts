@@ -25,3 +25,5 @@ Functions:
         11.) ns: Stands for "New Script": Make new bash script.
 
         12.) listFunctions: list all available functions of the custom script.
+
+        13.) orgDown: Function to organize my download folder.
