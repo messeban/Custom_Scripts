@@ -214,6 +214,7 @@ function ns(){
 		then
 			gohome
 			echo "#!/bin/bash">"$1".sh
+			chmod u+x "$1.sh"
 			code "$1.sh"
 		else
 			read -p "Name your script:" choice
